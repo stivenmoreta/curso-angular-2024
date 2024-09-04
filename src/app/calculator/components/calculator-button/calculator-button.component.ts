@@ -32,9 +32,16 @@ export class CalculatorButtonComponent {
       typeof value === 'string' ? value === '' : value,
   });
 
-  // @HostBinding('class.is-command') get commandStyle() {
-  //   return this.isCommand();
-  // }
+  //NOTA: En este caso no aplica la clase porque, va dirigido al host y no al contenido del componente.
+  //opción 1: crear la clase en el style global, no recomendado
+  //opción 2: desencapsular el componente, pero eso propagaria los estilos a toda la pagina
+  //opción 3: usar el ::deep pero no es recomendado por angular
+  //opción 4: poner la clase en el padre y no en el hijo, no recomendado porque pierde el orden y costaria encontrar donde modificar.
+  //la mejor opción es aplicar los estilos al button directamente
+  //APRENDIZAJE: Recordad el orden jerarquico de los estilos de angular.
+/*  @HostBinding('class.is-command') get commandStyleI() {
+    return this.isCommand();
+  }*/
 
   @HostBinding('class.w-2/4') get commandStyle() {
     return this.isDoubleSize();
