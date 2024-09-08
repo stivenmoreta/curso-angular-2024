@@ -1,8 +1,8 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ElementRef, EventEmitter,
-  input, Output,
+  ElementRef,
+  input,
   output,
   signal,
   viewChild
