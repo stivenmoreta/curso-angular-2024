@@ -11,15 +11,15 @@ describe('CalculatorService', () => {
   });
 
   beforeAll(() => {
-    console.log('Before all tests');
+    //console.log('Before all tests');
   });
 
   afterEach(() => {
-    console.log('After each test');
+    //console.log('After each test');
   });
 
   afterAll(() => {
-    console.log('After all tests');
+    //console.log('After all tests');
   });
 
 
